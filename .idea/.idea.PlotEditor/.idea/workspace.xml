@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f261ed57-028c-47fe-97f6-5ede099fcd36" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MenuOptionBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MyFile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialogPieceBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DragUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RelatedPropertyInputBehaviour/RelatedPropertyInputBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RelatedPropertyInputBehaviour/SpeakerInputBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RelatedPropertyInputBehaviour/ContentInputBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/98DA2062-F8D5-40E1-9AAE-F2038A83C747/a7/1f78ca43/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B012CCB5-E8AA-445E-9080-C84BCBD08B7E/de/91c37647/IBeginDragHandler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialogOperationBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dialog.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/LinkLineBehaiour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EntranceTagBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6B144447-7C1D-41C6-92EF-6C02A8383085/c2/aff0869c/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/440D1D09-336D-46EE-B6BA-2229A55AC755/55/5527fa67/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DialogManager.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/HelloWorld.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DragUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EntranceTagBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/MenuOptionBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/LinkLineBehaiour.cs" />
+        <option value="$PROJECT_DIR$/Assets/ScrollMouseBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RelatedPropertyInputBehaviour/RelatedPropertyInputBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RelatedPropertyInputBehaviour/ContentInputBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/RelatedPropertyInputBehaviour/SpeakerInputBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dialog.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/File.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MyFile.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/LinkLineBehaiour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MenuOptionBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DialogManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DialogOperationBehaviour.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DialogPieceBehaviour.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1acT0NkItMCgIk2XhYdGFWcKhEM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34968466" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.29992992" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="15696">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" value="15696" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f261ed57-028c-47fe-97f6-5ede099fcd36" name="Default Changelist" comment="" />
+      <created>1587033659316</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587033659316</updated>
+      <workItem from="1587033666120" duration="135000" />
+      <workItem from="1587033855522" duration="694000" />
+      <workItem from="1587086066402" duration="879000" />
+      <workItem from="1587172433311" duration="1186000" />
+      <workItem from="1587174499152" duration="3000" />
+      <workItem from="1587174593721" duration="6000" />
+      <workItem from="1587174848738" duration="52000" />
+      <workItem from="1587224761978" duration="823000" />
+      <workItem from="1587346593072" duration="3274000" />
+      <workItem from="1587369712468" duration="2140000" />
+      <workItem from="1587376953585" duration="497000" />
+      <workItem from="1587380955797" duration="2592000" />
+      <workItem from="1587388410507" duration="8471000" />
+      <workItem from="1587449600254" duration="5961000" />
+      <workItem from="1587482698689" duration="1752000" />
+      <workItem from="1587727291316" duration="3144000" />
+      <workItem from="1587730827348" duration="255000" />
+      <workItem from="1587731676626" duration="1435000" />
+      <workItem from="1587997623940" duration="4942000" />
+      <workItem from="1588003022173" duration="651000" />
+      <workItem from="1588033469877" duration="330000" />
+      <workItem from="1588034801272" duration="482000" />
+      <workItem from="1588044447119" duration="1108000" />
+      <workItem from="1588045818348" duration="2678000" />
+      <workItem from="1588076648719" duration="992000" />
+      <workItem from="1588083311448" duration="684000" />
+      <workItem from="1588084545674" duration="377000" />
+      <workItem from="1588298361362" duration="981000" />
+      <workItem from="1588300654489" duration="8422000" />
+      <workItem from="1588383365535" duration="7667000" />
+      <workItem from="1588495620048" duration="2367000" />
+      <workItem from="1588512735376" duration="794000" />
+      <workItem from="1588516775931" duration="741000" />
+      <workItem from="1588553234083" duration="4564000" />
+      <workItem from="1588565957579" duration="2982000" />
+      <workItem from="1588578476396" duration="1028000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1458" height="129" key="GridCell.Tab.0.bottom" timestamp="1588579079268">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1588579079268" />
+    <state width="1458" height="129" key="GridCell.Tab.0.center" timestamp="1588579079268">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1588579079268" />
+    <state width="1458" height="129" key="GridCell.Tab.0.left" timestamp="1588579079268">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1588579079268" />
+    <state width="1458" height="129" key="GridCell.Tab.0.right" timestamp="1588579079268">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1588579079268" />
+    <state width="1458" height="129" key="GridCell.Tab.1.bottom" timestamp="1588579141346">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1588579141346" />
+    <state width="1458" height="129" key="GridCell.Tab.1.center" timestamp="1588579141346">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1588579141346" />
+    <state width="1458" height="129" key="GridCell.Tab.1.left" timestamp="1588579141346">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1588579141346" />
+    <state width="1458" height="129" key="GridCell.Tab.1.right" timestamp="1588579141346">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1588579141346" />
+    <state width="1458" height="129" key="GridCell.Tab.2.bottom" timestamp="1588579079095">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.2.bottom/0.0.1500.960@0.0.1500.960" timestamp="1588579079095" />
+    <state width="1458" height="129" key="GridCell.Tab.2.center" timestamp="1588579079095">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.2.center/0.0.1500.960@0.0.1500.960" timestamp="1588579079095" />
+    <state width="1458" height="129" key="GridCell.Tab.2.left" timestamp="1588579079095">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.2.left/0.0.1500.960@0.0.1500.960" timestamp="1588579079095" />
+    <state width="1458" height="129" key="GridCell.Tab.2.right" timestamp="1588579079095">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.2.right/0.0.1500.960@0.0.1500.960" timestamp="1588579079095" />
+    <state width="1458" height="129" key="GridCell.Tab.3.bottom" timestamp="1588579079096">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.3.bottom/0.0.1500.960@0.0.1500.960" timestamp="1588579079096" />
+    <state width="1458" height="129" key="GridCell.Tab.3.center" timestamp="1588579079096">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.3.center/0.0.1500.960@0.0.1500.960" timestamp="1588579079096" />
+    <state width="1458" height="129" key="GridCell.Tab.3.left" timestamp="1588579079095">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.3.left/0.0.1500.960@0.0.1500.960" timestamp="1588579079095" />
+    <state width="1458" height="129" key="GridCell.Tab.3.right" timestamp="1588579079096">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1458" height="129" key="GridCell.Tab.3.right/0.0.1500.960@0.0.1500.960" timestamp="1588579079096" />
+    <state x="343" y="212" key="Rider.ProjectTemplateDialog.Size" timestamp="1588517218977">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="343" y="212" key="Rider.ProjectTemplateDialog.Size/0.0.1500.960@0.0.1500.960" timestamp="1588517218977" />
+    <state x="233" y="120" key="SettingsEditor" timestamp="1587391864955">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="233" y="120" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1587391864955" />
+  </component>
+</project>
