@@ -28,6 +28,7 @@ public class LinkLineBehaiour : MonoBehaviour
            
             
             gameObject.GetComponent<RectTransform>().SetParent(GameObject.Find("ScrollView").GetComponent<RectTransform>());
+            gameObject.GetComponent<RectTransform>().localScale=new Vector3(1,1,1);
             parent = (RectTransform) gameObject.GetComponent<RectTransform>().parent;
             Vector3 pivot = formerTrans.position;
             Vector3 spos = Camera.main.WorldToScreenPoint(pivot);
@@ -52,7 +53,7 @@ public class LinkLineBehaiour : MonoBehaviour
            Vector2 _uiPos1,_uiPos2;
            _uiPos1 = transform.anchoredPosition;
            RectTransformUtility.ScreenPointToLocalPointInRectangle(parent, Camera.main.WorldToScreenPoint(Input.mousePosition), Camera.main, out _uiPos2);
-           transform.localScale=new Vector3(1,1,1);
+         
            Quaternion angle=new Quaternion();
            angle.eulerAngles=new Vector3(0,0,57.3f*Mathf.Atan((_uiPos2.y-_uiPos1.y)/(_uiPos2.x-_uiPos1.x)));//180/PI=57.3
            transform.sizeDelta = new Vector2(Mathf.Max(Vector2.Distance(_uiPos1, _uiPos2)-20,0),1);

@@ -49,6 +49,7 @@ public class DialogOperationBehaviour : MonoBehaviour
             selectedObject.GetComponent<DialogPieceBehaviour>().DelelteSelf();
         }
 
+       
         selectedObject = null;
     }
 

@@ -16,13 +16,19 @@ public class Dialog
         dialogStream=new List<DialogPiece>();
        
     }
+
+    public object this[int vQueueIndex]
+    {
+        get { throw new NotImplementedException(); }
+    }
 }
 [Serializable]
 public class DialogPiece
 {
     public List<int> formarPiece;
     public int? nextPiece;
-    
+
+    public  APosition NodePosition;
     //对话内容
     public  string content;
     //说话的那个人的名字
@@ -84,4 +90,27 @@ public class DialogAnswer
          answerContent = "";
          nextPiece = null;
      }
+}
+
+public struct APosition
+{
+    public  float x;
+    public float y;
+
+    APosition(float x, float y)
+    {
+        this.x = x;
+        this.y = y;
+    }
+
+    
+    public static implicit operator Vector2(APosition position)
+    {
+        return new Vector2(position.x,position.y);
+    }
+
+    public static implicit operator APosition(Vector2 vector2)
+    {
+        return new APosition(vector2.x,vector2.y);
+    }
 }

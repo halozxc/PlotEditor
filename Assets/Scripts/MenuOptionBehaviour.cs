@@ -35,6 +35,7 @@ public class MenuOptionBehaviour : MonoBehaviour
         if (nextDialogPieceNode==null)
         {
             tempLink = Instantiate(LinkLinePrefab);
+            
             LinkLineBehaiour linkline = tempLink.GetComponent<LinkLineBehaiour>();
             linkline.former = parent;
             linkline.formerRect = LinkDot;

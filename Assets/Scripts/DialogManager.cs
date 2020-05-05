@@ -2,7 +2,7 @@
 
 using System.Collections.Generic;
 using System.IO;
-
+using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,8 +12,10 @@ public class DialogManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public static string defaultContent = "unknown";
-   public static string defaultBranchName = "default";
+  
    public GameObject DialogPiecePrefab;
+   public GameObject MenuOptionPrefab;
+   public GameObject LinkLinePrefab;
    public RectTransform ScrollZone;
    public static DialogManager instance;
    private RectTransform DialogPieceRect;
@@ -63,6 +65,21 @@ public class DialogManager : MonoBehaviour
    {
        SaveToFile();
    }
+
+ public void OpenTest()
+ {
+
+     string path = MyFile.AddGame();
+     if (path != null)
+     {
+         StreamReader reader=new StreamReader(path);
+         string str = reader.ReadToEnd();
+         Dialog dialog = JsonConvert.DeserializeObject<Dialog>(str);
+         DialogToBehaviour(dialog);   
+     }
+     
+     
+ }
    public  Dialog BehaviourToDialog()
    {
        Dialog dialog=new Dialog();
@@ -72,6 +89,7 @@ public class DialogManager : MonoBehaviour
            DialogPiece dialogPiece=new DialogPiece();
            dialogPiece.content = v.ContentText.text;
            dialogPiece.speaker = v.SpeakerText.text;
+           dialogPiece.NodePosition = DialogPieces[v.QueueIndex].GetComponent<RectTransform>().anchoredPosition;
            if (v.formarDialogPieceNode.Count != 0)
            {
                 foreach (var w in v.formarDialogPieceNode)
@@ -109,12 +127,74 @@ public class DialogManager : MonoBehaviour
        return dialog;
    }
 
+   public void DialogToBehaviour(Dialog dialog)
+   {
+       while (dialogPieceBehaviours.Count > 0)
+       {
+           dialogPieceBehaviours[0].DelelteSelf();
+       }
+
+//恢复节点与连接
+       foreach (var v in dialog.dialogStream)
+       {
+           GameObject piece = Instantiate(DialogPiecePrefab);
+           DialogPieceBehaviour behaviour = piece.GetComponent<DialogPieceBehaviour>();
+           RectTransform transform = piece.GetComponent<RectTransform>();
+           transform.SetParent(ScrollZone);
+           transform.localScale = new Vector3(1, 1, 1);
+           transform.anchoredPosition = v.NodePosition;
+           behaviour.ContentText.text = v.content;
+           behaviour.SpeakerText.text = v.speaker;
+           behaviour.QueueIndex = DialogPieces.Count;
+           DialogPieces.Add(piece);
+           dialogPieceBehaviours.Add(behaviour);
+       }
+
+       foreach (var v in dialogPieceBehaviours)
+       {
+           int? x = dialog.dialogStream[v.QueueIndex].nextPiece;
+           if (x != null)
+           {
+               MenuOptionBehaviour menu = v.DefaultOption.GetComponent<MenuOptionBehaviour>();
+               menu.parent = DialogPieces[v.QueueIndex];
+               menu.AddNewLink();
+               menu.nextDialogPieceNode = DialogPieces[dialog.dialogStream[v.QueueIndex].nextPiece.Value];
+               menu.tempLink.GetComponent<LinkLineBehaiour>().next = menu.nextDialogPieceNode;
+               menu.nextDialogPieceNode.GetComponent<DialogPieceBehaviour>().formarDialogLinkLine.Add(menu.tempLink.GetComponent<LinkLineBehaiour>());
+               menu.nextDialogPieceNode.GetComponent<DialogPieceBehaviour>().formarDialogPieceNode.Add(menu.parent);
+               
+           }
+            
+                       
+           for (int i = 0; i < dialog.dialogStream[v.QueueIndex].dialoganswer.Count; i++)
+           {
+            v.addMenuPiece();
+            MenuOptionBehaviour menu = v.answermenu[v.answermenu.Count - 1].GetComponent<MenuOptionBehaviour>();
+            menu.parent = DialogPieces[v.QueueIndex];
+            menu.AnswerContent.GetComponent<InputField>().text =
+                dialog.dialogStream[v.QueueIndex].dialoganswer[i].answerContent;
+            if (dialog.dialogStream[v.QueueIndex].dialoganswer[i].nextPiece != null)
+            {
+                menu.AddNewLink();
+                menu.nextDialogPieceNode =
+                    DialogPieces[dialog.dialogStream[v.QueueIndex].dialoganswer[i].nextPiece.Value];
+               menu.tempLink.GetComponent<RectTransform>().SetParent(ScrollZone);
+               menu.tempLink.GetComponent<RectTransform>().localScale=new Vector3(1,1,1);
+                menu.tempLink.GetComponent<LinkLineBehaiour>().next = menu.nextDialogPieceNode;
+                menu.nextDialogPieceNode.GetComponent<DialogPieceBehaviour>().formarDialogLinkLine.Add(menu.tempLink.GetComponent<LinkLineBehaiour>());
+                menu.nextDialogPieceNode.GetComponent<DialogPieceBehaviour>().formarDialogPieceNode.Add(menu.parent);
+                
+            }
+           }
+       }
+   }
+
    public void SaveToFile()
    {
        
        Dialog a=new Dialog();
        a = BehaviourToDialog();
-       string FileContent = JsonUtility.ToJson(a);
+       string FileContent = JsonConvert.SerializeObject(a);
        string pth = MyFile.SaveGame();
        if (pth != null)
        {
@@ -143,12 +223,13 @@ public class DialogManager : MonoBehaviour
        
        return _p;
         
-   } 
-   public Dialog GetAndLoadDialogFile(string FileNmae)
-    { 
-        
-        return null;
-    }
+   }
+
+   public bool DeleleteDialogPiece(GameObject gameObject)
+   {
+       return dialogPieceBehaviours.Remove(gameObject.GetComponent<DialogPieceBehaviour>())&& DialogPieces.Remove(gameObject);
+   }
+   
 }
 
 [Serializable]

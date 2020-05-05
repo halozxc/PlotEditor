@@ -25,15 +25,24 @@ public class DialogPieceBehaviour : MonoBehaviour
     public  List<GameObject> answermenu;
 
     public GameObject SelectedMenuOption;
-   
+
+    private void Awake()
+    {
+        answermenu=new List<GameObject>();
+        dialogPiece=new DialogPiece();
+        
+        answermenu.Add(DefaultOption);
+        if (DialogOperationBehaviour.instance != null)
+        {
+            Operator=DialogOperationBehaviour.instance;
+        }
+    }
 
     void Start()
     {
-        dialogPiece=new DialogPiece();
-        answermenu=new List<GameObject>();
+        
         Operator=DialogOperationBehaviour.instance;
         SelectedMenuOption = DefaultOption;
-        answermenu.Add(DefaultOption);
         formarDialogPieceNode=new List<GameObject>();
     }
     public void SetformarDialogPieceNode(GameObject gameObject)
@@ -52,7 +61,7 @@ public class DialogPieceBehaviour : MonoBehaviour
     public void addMenuPiece()
     {
         MenuOptionBehaviour _p = answermenu[answermenu.Count - 1].GetComponent<MenuOptionBehaviour>();
-        if (_p.AnswerContent.GetComponent<InputField>().text==""&&_p.tempLink==null)
+        if (_p.AnswerContent.GetComponent<InputField>().text==""&&_p.tempLink==null&&_p!=DefaultOption)
         {
             return;
         }
@@ -106,8 +115,11 @@ public class DialogPieceBehaviour : MonoBehaviour
 
         if (DefaultOption.GetComponent<MenuOptionBehaviour>().tempLink == null)
         {
-            Destroy(answermenu[answermenu.Count-1]);
-            answermenu.RemoveAt(answermenu.Count-1);
+            if (answermenu[answermenu.Count - 1] != DefaultOption)
+            {
+                Destroy(answermenu[answermenu.Count - 1]);
+                answermenu.RemoveAt(answermenu.Count - 1);
+            }
         }
 
         RectTransform _rt;
@@ -149,6 +161,8 @@ public class DialogPieceBehaviour : MonoBehaviour
 
            
         }
+
+        DialogManager.instance.DeleleteDialogPiece(gameObject);
         Destroy(gameObject);
     }
     public void SetContent(string Text)
